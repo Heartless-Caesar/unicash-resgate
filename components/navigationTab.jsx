@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import { BlurView } from "expo-blur";
 import Home from "../pages/Home";
 import React from "react";
@@ -23,6 +23,25 @@ const NavigationTab = () => {
           name="Home"
           component={Home}
           options={{
+            headerShown: true,
+            header: ({ navigation, route, options }) => (
+              <View
+                style={{ backgroundColor: "#212B4F", padding: 20, height: 100 }}
+              >
+                {/* Col 1 */}
+                <View style={{ flex: 1 }}>
+                  <Text style={{ color: "#f5f5f5" }}>Header Here</Text>
+                </View>
+                {/* Col 2 */}
+                <View style={{ flex: 1 }}>
+                  <Text style={{ color: "#f5f5f5" }}>Header Here</Text>
+                </View>
+                {/* Col 3 */}
+                <View style={{ flex: 1 }}>
+                  <Text style={{ color: "#f5f5f5" }}>Header Here</Text>
+                </View>
+              </View>
+            ),
             tabBarIcon: ({ color, focused, size }) => {
               return (
                 <MaterialCommunityIcons
