@@ -3,12 +3,8 @@ import React from "react";
 
 const Home = ({ navigation }) => {
   return (
-    <View>
+    <View style={{ justifyContent: "center", flex: 1 }}>
       <Text>Home</Text>
-      <Button
-        title="Ir para Lojas"
-        onPress={() => navigation.navigate("Lojas")}
-      ></Button>
     </View>
   );
 };

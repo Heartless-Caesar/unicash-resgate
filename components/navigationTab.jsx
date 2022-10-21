@@ -63,11 +63,10 @@ const NavigationTab = () => {
                   style={{
                     backgroundColor: "#212B4F",
                     padding: 10,
-                    height: 100,
-                    paddingTop: 10,
+                    height: 70,
                   }}
                 >
-                  <View>
+                  <View style={{ marginLeft: 10 }}>
                     <Text style={{ color: "#f5f5f5" }}>Saldo disponível</Text>
                     <View style={{ flexDirection: "row", padding: 5 }}>
                       <MaterialCommunityIcons
@@ -84,7 +83,7 @@ const NavigationTab = () => {
                       >
                         3.960
                       </Text>
-                      <View style={{ marginLeft: 200 }}>
+                      <View style={{ marginLeft: 190 }}>
                         <MaterialCommunityIcons
                           name="qrcode"
                           color="#f5f5f5"
