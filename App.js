@@ -6,6 +6,7 @@ import NavigationTab from "./components/navigationTab";
 export default function App() {
   return (
     <View style={styles.container}>
+      <StatusBar style="light" />
       <NavigationTab />
     </View>
   );

@@ -16,6 +16,7 @@ const NavigationTab = () => {
           headerShown: false,
           tabBarStyle: { position: "absolute", backgroundColor: "#232D52" },
           tabBarActiveTintColor: "#f5f5f5",
+          tabBarInactiveTintColor: "#f5f5f5",
         }}
         initialRouteName="Home"
       >
@@ -25,20 +26,73 @@ const NavigationTab = () => {
           options={{
             headerShown: true,
             header: ({ navigation, route, options }) => (
-              <View
-                style={{ backgroundColor: "#212B4F", padding: 20, height: 100 }}
-              >
-                {/* Col 1 */}
-                <View style={{ flex: 1 }}>
-                  <Text style={{ color: "#f5f5f5" }}>Header Here</Text>
+              <View>
+                <View
+                  style={{
+                    backgroundColor: "#212B4F",
+                    padding: 20,
+                    height: 100,
+                    paddingTop: 30,
+                    flexDirection: "row",
+                  }}
+                >
+                  {/* Col 1 */}
+                  <View style={{ flex: 1 }}>
+                    <MaterialCommunityIcons
+                      name="circle"
+                      color="#f5f5f5"
+                      size={50}
+                    />
+                  </View>
+                  {/* Col 2 */}
+                  <View style={{ flex: 3, marginTop: 5 }}>
+                    <Text style={{ color: "#f5f5f5" }}>Olá, Usuário</Text>
+                    <Text style={{ color: "#f5f5f5" }}>- Curso - </Text>
+                  </View>
+                  {/* Col 3 */}
+                  <View style={{ flex: 1 }}>
+                    <MaterialCommunityIcons
+                      name="bell"
+                      color="white"
+                      size={30}
+                      style={{ marginTop: 10, marginLeft: 25 }}
+                    />
+                  </View>
                 </View>
-                {/* Col 2 */}
-                <View style={{ flex: 1 }}>
-                  <Text style={{ color: "#f5f5f5" }}>Header Here</Text>
-                </View>
-                {/* Col 3 */}
-                <View style={{ flex: 1 }}>
-                  <Text style={{ color: "#f5f5f5" }}>Header Here</Text>
+                <View
+                  style={{
+                    backgroundColor: "#212B4F",
+                    padding: 10,
+                    height: 100,
+                    paddingTop: 10,
+                  }}
+                >
+                  <View>
+                    <Text style={{ color: "#f5f5f5" }}>Saldo disponível</Text>
+                    <View style={{ flexDirection: "row", padding: 5 }}>
+                      <MaterialCommunityIcons
+                        name="horse-variant"
+                        color="#f5f5f5"
+                        size={30}
+                      />
+                      <Text
+                        style={{
+                          color: "#f5f5f5",
+                          marginLeft: 10,
+                          fontSize: 20,
+                        }}
+                      >
+                        3.960
+                      </Text>
+                      <View style={{ marginLeft: 200 }}>
+                        <MaterialCommunityIcons
+                          name="qrcode"
+                          color="#f5f5f5"
+                          size={25}
+                        />
+                      </View>
+                    </View>
+                  </View>
                 </View>
               </View>
             ),
